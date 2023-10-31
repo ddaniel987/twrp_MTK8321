@@ -1,2 +1,2 @@
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_tb8321p2_bsp.mk
+LOCAL_PATH := device/alps/tb8321p2_bsp
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_tb8321p2_bsp.mk
