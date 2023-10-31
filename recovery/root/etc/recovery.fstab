@@ -1,0 +1,7 @@
+/persist            emmc      /dev/block/platform/bootdevice/by-name/frp   flags=display="Persist image";backup=1;flashimg=1
+/system             ext4      /dev/block/platform/bootdevice/by-name/system    flags=backup=1
+/cache              ext4      /dev/block/platform/bootdevice/by-name/cache                                   
+/data               ext4      /dev/block/platform/bootdevice/by-name/userdata                                
+/boot               emmc      /dev/block/platform/bootdevice/by-name/boot                                 
+/recovery           emmc      /dev/block/platform/bootdevice/by-name/recovery  flags=backup=1
+/misc               emmc      /dev/block/platform/bootdevice/by-name/para 
