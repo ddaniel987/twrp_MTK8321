@@ -1,0 +1,1 @@
+LOCAL_PATH := device/alps/tb8321p2_bsp

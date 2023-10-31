@@ -1,0 +1,2 @@
+add_lunch_combo omni_tb8321p2_bsp-userdebug
+add_lunch_combo omni_tb8321p2_bsp-eng
