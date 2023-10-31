@@ -1,5 +1,7 @@
-LOCAL_PATH := $(call my-dir)
+ifneq ($(filter tb8321p2_bsp,$(TARGET_DEVICE)),)
 
-ifeq ($(TARGET_DEVICE), tb8321p2_bsp)
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
+LOCAL_PATH := device/alps/tb8321p2_bsp
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
 endif
