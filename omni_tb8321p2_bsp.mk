@@ -16,9 +16,9 @@ PRODUCT_COPY_FILES += device/alps/tb8321p2_bsp/prebuilt/zImage:kernel
 PRODUCT_DEVICE := tb8321p2_bsp
 PRODUCT_NAME := omni_tb8321p2_bsp
 PRODUCT_BRAND := alps
-PRODUCT_MODEL := ZQ8003
+PRODUCT_MODEL := tb8321p2_bsp
 PRODUCT_MANUFACTURER := alps
-PRODUCT_RELEASE_NAME := alps ZQ8003
+PRODUCT_RELEASE_NAME := alps tb8321p2_bsp
 
 # Forcefully add mtp support (adb is already there)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
