@@ -1,17 +1,19 @@
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
+#
+# Copyright (C) 2022 The Android Open Source Project
+# Copyright (C) 2022 SebaUbuntu's TWRP device tree generator
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 
-# Another common config inclusion
-$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
+$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# If you are building from OmniROM's minimal source, Inherit some common Omni stuff.
+$(call inherit-product, device/alps/tb8321p2_bsp/device.mk)
+
+# Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
-
-# Replace $$DEVICE$$ with your Device Name's Value.
-# Replace $$BRAND$$ with your Brand's / Manufacturer's Value.
-PRODUCT_COPY_FILES += device/alps/tb8321p2_bsp/prebuilt/zImage:kernel
-# Fles under $(LOCAL_PATH)/recovery/root/ gets automatically copied into recovery
-# PRODUCT_COPY_FILES += $(LOCAL_PATH)/recovery/root/*:root/*
 
 PRODUCT_DEVICE := tb8321p2_bsp
 PRODUCT_NAME := omni_tb8321p2_bsp
