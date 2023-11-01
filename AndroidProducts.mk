@@ -1,2 +1,7 @@
-LOCAL_PATH := device/alps/tb8321p2_bsp
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_tb8321p2_bsp.mk
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/omni_tb8321p2_bsp.mk
+
+COMMON_LUNCH_CHOICES := \
+    omni_tb8321p2_bsp-user \
+    omni_tb8321p2_bsp-userdebug \
+    omni_tb8321p2_bsp-eng
